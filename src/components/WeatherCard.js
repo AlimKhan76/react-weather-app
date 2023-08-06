@@ -28,7 +28,7 @@ export const WeatherCard = ({ tempInfo }) => {
                     break;
 
                 default:
-                    setWeatherMood(" bi-brigthness-high")
+                    setWeatherMood(" bi-brightness-high ")
                     break;
             }
         }
