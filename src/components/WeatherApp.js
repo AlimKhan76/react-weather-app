@@ -31,7 +31,8 @@ export const WeatherApp = () => {
             setTempInfo(weatherInfo);
         }
         catch (err) {
-            console.log(err);
+            return alert("No city of name " +searchInput+ " found");
+            
         }
     }
 

@@ -59,7 +59,7 @@ export const WeatherCard = ({ tempInfo }) => {
 
                 {/* section with the info about the temp, date & time, description of weather, city name  */}
                 <div className="row mx-0">
-                    <div className="col-8 text-white bg-dark" >
+                    <div className="col-md-8 text-white bg-dark" >
                         <div className="row align-items-center">
                             <div className="col-6">
                                 <p style={{ fontSize: "5vw" }}>
@@ -72,7 +72,7 @@ export const WeatherCard = ({ tempInfo }) => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-4 text-center">
+                    <div className="col-md-4 text-center">
                         <h1>
                             {new Date().toLocaleDateString()}
                         </h1>
