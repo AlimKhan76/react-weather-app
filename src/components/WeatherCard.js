@@ -2,9 +2,10 @@ import React, { useEffect, useState } from 'react'
 
 // The card which appear below the search bar, it contains all the information about the weather 
 export const WeatherCard = ({ tempInfo }) => {
+    // State used for the logo of the weather 
     const [weatherMood, setWeatherMood] = useState("");
 
-
+// Useeffect will run if there is a change in tempInfo.desc which is nothing but weather names like Haze, Clouds, Rain, Snow, etc, The logo will change accordingly to the weather 
     useEffect(() => {
         if (tempInfo.desc) {
             switch (tempInfo.desc) {
@@ -38,7 +39,7 @@ export const WeatherCard = ({ tempInfo }) => {
 
 
 
-
+//  the APi provides the time in seconds format 
     // Convert the sunset time which the api provides in seconds into readable format 
     let sec = tempInfo.sunset;
     let date = new Date(sec * 1000);
@@ -59,26 +60,20 @@ export const WeatherCard = ({ tempInfo }) => {
 
                 {/* section with the info about the temp, date & time, description of weather, city name  */}
                 <div className="row mx-0">
-                    <div className="col-md-8 text-white bg-dark" >
+                    <div className="col-md-12 text-center text-white bg-dark" >
                         <div className="row align-items-center">
-                            <div className="col-6">
+                            <div className="col">
                                 <p style={{ fontSize: "5vw" }}>
                                     {tempInfo.temp + `\u00B0C`}
                                 </p>
                             </div>
-                            <div className="col-6">
+                            <div className="col">
                                 <h1>{tempInfo.desc}</h1>
                                 <p>{tempInfo.name},{tempInfo.country}</p>
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-4 text-center">
-                        <h1>
-                            {new Date().toLocaleDateString()}
-                        </h1>
-                        <h3>{new Date().toLocaleTimeString()}</h3>
-                    </div>
-                </div>
+                   </div>
 
                 {/* 4 cards section */}
                 <div className="row mx-0 py-2 text-center border-top border-black">
